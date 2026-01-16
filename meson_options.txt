@@ -6,17 +6,17 @@ option('docs', type: 'feature', value: 'auto',
        description: 'Generate and install documentation')
 option('audit', type: 'feature', value: 'auto',
        description: 'audit support')
-option('econf', type: 'feature', value: 'auto',
+option('econf', type: 'feature', value: 'disabled',
        description: 'libeconf support')
-option('logind', type: 'feature', value: 'auto',
+option('logind', type: 'feature', value: 'enabled',
        description: 'logind support in pam_issue, pam_limits, and pam_timestamp via systemd')
-option('elogind', type: 'feature', value: 'auto',
+option('elogind', type: 'feature', value: 'disabled',
        description: 'logind support in pam_issue, pam_limits, and pam_timestamp via elogind')
-option('openssl', type: 'feature', value: 'disabled',
+option('openssl', type: 'feature', value: 'enabled',
        description: 'Use OpenSSL crypto libraries in pam_timestamp')
-option('pwaccess', type: 'feature', value: 'auto',
+option('pwaccess', type: 'feature', value: 'disabled',
        description: 'libpwaccess support in pam_unix')
-option('selinux', type: 'feature', value: 'auto',
+option('selinux', type: 'feature', value: 'enabled',
        description: 'SELinux support')
 option('nis', type: 'feature', value: 'auto',
        description: 'NIS/YP support in pam_unix')
@@ -90,7 +90,7 @@ option('randomdev', type: 'string',
 option('vendordir', type: 'string', value: '/usr/share/pam',
        description: 'Distribution provided configuration files directory')
 
-option('pam_userdb', type: 'feature', value: 'auto',
+option('pam_userdb', type: 'feature', value: 'disabled',
        description: 'pam_userdb module')
 option('db', type: 'combo', choices: ['db', 'gdbm', 'ndbm', 'auto'],
        value: 'auto')
